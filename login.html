@@ -4,20 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
-    <link rel="stylesheet" href="website.css">
+    <link rel="stylesheet" href="login.css">
+    <!--<link rel="stylesheet" href="website.css">-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="index.html">
-
-
 </head>
-<body style="background-image: url(kerala2.jpg);">
+<body background="kerala2.jpg" class="bg1">
 
   <!--navbar-->
-<div class="">
-    <nav class="navbar bg-primary border bottom border-body">
+<div class="container">
+    <nav class="navbar ">
         <!-- Navbar content-->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary w-100 h-50">
+        <nav class="navbar navbar-expand-lg w-100 h-50">
               <a class="navbar-brand" href="index.html" style="font-family: 'Times New Roman', Times, serif;">Kerala Tourism</a>
               <!--logo-->
               <nav class="navbar bg-body-tertiary">
@@ -28,16 +26,16 @@
               </button>
               <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item border border-dark">
+                  <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                   </li>&nbsp;
-                  <li class="nav-item border border-dark">
+                  <li class="nav-item">
                     <a class="nav-link" href="login.html">Login</a>
                   </li>&nbsp;
-                  <li class="nav-item border border-dark">
+                  <li class="nav-item">
                     <a class="nav-link" href="signup.html">Sign Up</a>
                   </li>&nbsp;
-                  <li class="nav-item dropdown border border-dark">
+                  <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="cards.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Districts
                     </a>
@@ -61,14 +59,11 @@
                   </li>
                 </ul>
               </div>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
             </div>
           </nav>
       </nav>
 </div>
+ </div>
 <!--navbar ends-->
 
 
@@ -76,28 +71,38 @@
 
 
 
-
-
-
 <!--form start here-->
-    <form class="col-5 border border-primary ms-5">
-        <div class="m-5 h-50">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+<div class="container">
+  <div class="row d-flex justify-content-center align-item-center">
+    <div class="col-md-6 col-sm-12">
+      <form onsubmit="validate()">
+        <div>
+          <label for="exampleInputEmail1" class="form-label">Email</label>
+          <input type="email" class="form-control " id="email"  oninvalid="emailvalid()" placeholder="eg:ictak@gmail.com" aria-describedby="emailHelp">
         </div>
-        <div class="m-5">
+        <div>
           <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <input type="password" class="form-control" id="psw" class="psw" placeholder="enter password">
+          <label for="error" id="pwderror"></label>
+        </div><br>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input bg-secondary" id="exampleCheck1">
+          <label class="form-check-label pb-2" for="exampleCheck1">Remember me</label>
         </div>
-        <a href="#" style="margin-left: 50px; font-weight: 600;">Forgot password?</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="signup.html" style="font-weight: 600;">signup</a>
-        <div class="m-5 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Remember me</label>
+        <br>
+        <div class=" mb-1 text-center">
+          <button type="submit" class="button">Login</button>
         </div>
-        <div class="mb-2 text-center">
-          <button type="submit" class="btn btn-primary">Submit</button>
+        <div>
+          <a href="#" style="margin-left: 20px; font-weight: 400;" class="pb-2">Forgot password?</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <p style="font-weight: 500; color: rgb(1, 24, 31);">Dont have an account?<a href="signup.html" style="font-weight: 300;">Signup</a>
+          </p>
         </div>
-        </form>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="login.js"></script>
 </body>
 </html>

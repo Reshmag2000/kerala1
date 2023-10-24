@@ -6,6 +6,10 @@ body{
     background-size: cover;
     background-image: url("images/bggg.jpg"); 
     background-repeat: no-repeat;
+    
+}
+.border-light{
+    display: none;
 }
 h3{
     text-align: left;

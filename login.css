@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+form{
+    /*margin-left: 300px;*/
+    width: 500px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0,0.5);
+    box-shadow: 10cm;
+    border-radius: 10px;
+    margin: 0px 300px 0px 0px;
+    background-position: fixed;
+    
+}
+.form-label{
+    color: azure;
+    font-weight: 500;
+    
+}
+.form-check-label{
+    color: bisque;
+}
+.bg1{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+button{
+    display: block;
+    width: 250px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(63, 114, 76,0.7);
+    color: rgb(209,209,209);
+    padding:7px;
+}
+.button:hover{
+    background-color: rgba(56, 204,93,0.7);
+    color: white;
+}
+
+
+.message{
+    width: 100%;
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+.message .success{
+    font-size: 20px;
+    color: green;
+    position: absolute;
+    transition: .3s;
+    animation: buttons .3s linear;
+    display: none;
+}
+@keyframes buttons {
+    0%{
+        transform: scale(0.1);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
